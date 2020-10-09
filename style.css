@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    --hue: var(--hue-neutral);
+    font-size: 1.6rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);}
+
+body.correct{
+    --hue: var(--hue-correct);
+}
+body.wrong{
+    --hue: var(--hue-wrong);
+}
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 3rem;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+.btn{
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%,30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 3rem;
+    padding: 5px;
+    color: white;
+    outline: none;
+
+}
+
+.btn:hover {
+    border-color: black;
+}
+.btn.correct{
+    --hue: var(--hue-correct);
+    color: black;
+}
+.btn.wrong{
+    --hue: var(--hue-wrong);
+}
+.start-btn, next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide{
+    display: none;
+}
+.question{
+   display: flex;
+   justify-content: center;
+}
